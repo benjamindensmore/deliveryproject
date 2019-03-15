@@ -1,0 +1,25 @@
+const clientId = "HMeuTv9kcsW67dPzullead"
+
+const apiKey= "5DQk4Bb7EhOmRQ1VPObPszX_1ZHUjmYsBirQJYrDCxESG9TJw9TJw9svXchyyQ7nHLnbu88miJJnKVolMW9eu5ELrEnJAKS1oyQScCyWtVM0FqczJtOfLKopDFChQweMXHYx"
+
+const url = "https://api.yelp.com/v3/transactions/delivery/search?"
+const location = "&find_loc="
+const userLocation = inputField.value
+
+    const endpoint = `${url}${location}${userLocation}`
+    
+
+
+const delivery = async() =>{
+  try{
+    const response = await fetch(endpoint);
+    if(response.ok){
+      const data = await response.json();
+    }.then(console.log(data))
+    
+  }
+  catch(error){console.log(error)}
+}
+
+    const inputField = document.querySelector('#input')
+
